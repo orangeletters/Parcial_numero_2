@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="@string/inicio"/>
+
+        <item
+            android:id="@+id/nav_brands"
+            android:icon="@drawable/nav_brands"
+            android:title="@string/marcas"/>
+
+        <item
+            android:id="@+id/nav_watches"
+            android:icon="@drawable/nav_watches"
+            android:title="@string/relojes"/>
+
+        <item
+            android:id="@+id/nav_shopcar"
+            android:icon="@drawable/nav_shopcart"
+            android:title="@string/carrito"/>
+
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/nav_exit"
+                android:title="@string/salir"/>
+        </menu>
+    </item>
+
+
+
+
+</menu>

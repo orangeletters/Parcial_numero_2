@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Parcial_numero_2</string>
+    <string name="open_nav">Open Parcial 2</string>
+    <string name="close_nav">Close Parcial 2</string>
+    <string name="app">RELOJERIA</string>
+    <string name="inicio">Inicio</string>
+    <string name="marcas">Marcas</string>
+    <string name="relojes">Relojes</string>
+    <string name="carrito">Carrito</string>
+    <string name="salir">Salir</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragmento_de_las_marcas">Fragmento de las marcas</string>
 </resources>
