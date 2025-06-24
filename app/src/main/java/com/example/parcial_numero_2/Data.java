@@ -10,7 +10,7 @@ public class Data {
     static {
         watches.add(new Watch("1","Rolex Submariner",8999.99, R.drawable.imagen1));
         watches.add(new Watch("2","Omega Speedmaster",5999.99, R.drawable.imagen1));
-        // añade más si quieres
+
     }
 
     public static void addToCart(Watch w) {
