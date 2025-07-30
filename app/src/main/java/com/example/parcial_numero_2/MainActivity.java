@@ -85,7 +85,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     .beginTransaction()
                     .replace(R.id.fragment_container, new ShopcartFragment())
                     .commit();
-        } else if (id == R.id.nav_exit) {
+        } else if (id == R.id.nav_relojes) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new RelojesFragment())
+                    .commit();
+        }else if (id == R.id.nav_exit) {
             Toast.makeText(this, "Adios", Toast.LENGTH_SHORT).show();
         }
 

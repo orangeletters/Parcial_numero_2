@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,22 +9,94 @@
     tools:context=".RelojesFragment">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Modelo: " />
+        android:text="Modelo:"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/modeloEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del modelo"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Marca:"
+        app:layout_constraintTop_toBottomOf="@id/modeloEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/marcaEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la marca"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Descripción:"
+        app:layout_constraintTop_toBottomOf="@id/marcaEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/descrEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Descripción del reloj"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Precio:"
+        app:layout_constraintTop_toBottomOf="@id/descrEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/precioEdit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="$00.00"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout="@id/editText"
-        android:text="Marcas: "/>
+        android:text="Agregar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/precioEdit"
+        app:layout_constraintVertical_bias="0.224" />
 
 
-</ConstraintLayout >
+</androidx.constraintlayout.widget.ConstraintLayout >
