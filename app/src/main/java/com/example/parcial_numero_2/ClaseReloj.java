@@ -1,6 +1,6 @@
 package com.example.parcial_numero_2;
 
-/**
+/*
  * no puedo mas con mi vida
  * Modelo de datos para sqlite
  */
