@@ -1,5 +1,7 @@
 /* package com.example.parcial_numero_2;
 
+// -----CONTENIDO QUE HAY QUE CORREGIR PORQUE NO ESTÁ CONECTADO A LA BASE DE DATOS-----
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;

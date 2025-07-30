@@ -1,5 +1,7 @@
 /* package com.example.parcial_numero_2;
 
+// -----BORRAR ESTA CLASE PORQUE CONTIENE CONTENIDO NO NECESARIO------
+
 import java.util.ArrayList;
 import java.util.List;
 
