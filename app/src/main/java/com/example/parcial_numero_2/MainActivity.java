@@ -10,10 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
@@ -78,14 +75,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_watches) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragment_container, new WatchesFragment())
+                    .replace(R.id.fragment_container, new TodosLosRelojesFragment())
                     .commit();
-        } else if (id == R.id.nav_shopcar) {
+        } /*else if (id == R.id.nav_shopcar) { //Por ahora estará con comentarios para poder poner en función la aplicación. Recordar que Menú también puede tirar error si esto no se detecta (espero que no)
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, new ShopcartFragment())
                     .commit();
-        } else if (id == R.id.nav_exit) {
+        }*/ else if (id == R.id.nav_relojes) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, new RelojesFragment())
+                    .commit();
+        }else if (id == R.id.nav_exit) {
             Toast.makeText(this, "Adios", Toast.LENGTH_SHORT).show();
         }
 

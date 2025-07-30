@@ -1,4 +1,6 @@
-package com.example.parcial_numero_2;
+/* package com.example.parcial_numero_2;
+
+// -----CONTENIDO QUE HAY QUE CORREGIR PORQUE NO ESTÁ CONECTADO A LA BASE DE DATOS-----
 
 import android.os.Bundle;
 
@@ -42,3 +44,4 @@ public class ShopcartFragment extends Fragment {
         loadData();
     }
 }
+*/
