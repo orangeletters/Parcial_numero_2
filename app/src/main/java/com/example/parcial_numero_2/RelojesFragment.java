@@ -1,5 +1,7 @@
 package com.example.parcial_numero_2;
 
+import android.app.AlertDialog;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,7 +16,7 @@ import android.widget.Toast;
 public class RelojesFragment extends Fragment {
 
     EditText modeloEdit, marcaEdit, descrEdit, precioEdit;
-    Button añadirButton;
+    Button anadirButton, mostrarButton;
 
 
     @Override
@@ -36,24 +38,31 @@ public class RelojesFragment extends Fragment {
         descrEdit = v.findViewById(R.id.descrEdit);
         precioEdit = v.findViewById(R.id.precioEdit);
 
-        añadirButton = v.findViewById(R.id.button);
+        anadirButton = v.findViewById(R.id.button);
+        mostrarButton = v.findViewById(R.id.button2);
 
 
-            añadirButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    boolean isInserted = myDB.insertValues(modeloEdit.getText().toString(), marcaEdit.getText().toString());
+        anadirButton.setOnClickListener(new View.OnClickListener() {
 
-                    if (isInserted) {
-                        Toast.makeText(getActivity(), "Data is inserted", Toast.LENGTH_SHORT).show();
-                    }else {
-                        Toast.makeText(getActivity(), "Smth went wrong", Toast.LENGTH_SHORT).show();
-                    }
+            @Override
+            public void onClick(View v) {
+                String mod = modeloEdit.getText().toString().trim();
+                String mar= marcaEdit.getText().toString().trim();
+                String des = descrEdit.getText().toString().trim();
+                String pre = precioEdit.getText().toString().trim();
+
+                boolean isInserted = myDB.insertValues(mod, mar, des, pre);
+
+                if (isInserted) {
+                    modeloEdit.setText("");
+                    marcaEdit.setText("");
+                    descrEdit.setText("");
+                    precioEdit.setText("");
+                }else {
+                    Toast.makeText(getActivity(), "Smth went wrong", Toast.LENGTH_SHORT).show();
                 }
-            });
-
+            }
+        });
         return v;
     }
-
-
 }

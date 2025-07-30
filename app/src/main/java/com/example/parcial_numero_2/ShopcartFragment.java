@@ -1,4 +1,4 @@
-package com.example.parcial_numero_2;
+/* package com.example.parcial_numero_2;
 
 import android.os.Bundle;
 
@@ -42,3 +42,4 @@ public class ShopcartFragment extends Fragment {
         loadData();
     }
 }
+*/

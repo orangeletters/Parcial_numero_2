@@ -1,4 +1,4 @@
-package com.example.parcial_numero_2;
+/* package com.example.parcial_numero_2;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.VH> {
-    List<Watch> list;
+    List<ClaseReloj> list;
 
-    public CartAdapter(List<Watch> list) {
+    public CartAdapter(List<ClaseReloj> list) {
         this.list = list;
     }
 
@@ -42,7 +42,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.VH> {
 
     @Override
     public void onBindViewHolder(VH h, int p) {
-        Watch w = list.get(p);
+        ClaseReloj w = list.get(p);
         h.img.setImageResource(w.imageResId);
         h.name.setText(w.name);
         h.price.setText(String.format("$%.2f", w.price));
@@ -58,5 +58,5 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.VH> {
     public int getItemCount() {
         return list.size();
     }
-}
+} */
 

@@ -27,6 +27,11 @@
             android:icon="@drawable/nav_shopcart"
             android:title="@string/carrito"/>
 
+        <item
+            android:id="@+id/nav_relojes"
+            android:icon="@drawable/nav_relojes"
+            android:title="@string/relojesprueba"/>
+
     </group>
 
     <item
