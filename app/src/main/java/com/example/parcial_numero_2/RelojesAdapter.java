@@ -16,12 +16,16 @@ public class RelojesAdapter extends RecyclerView.Adapter<RelojesAdapter.VH> {
 
     List<ClaseReloj> list;
 
-    public RelojesAdapter(List<ClaseReloj> list) {
+    DatabaseHelper myDB;
+
+    public RelojesAdapter(List<ClaseReloj> list, DatabaseHelper myDB) {
         this.list = list;
+        this.myDB = myDB;
     }
 
     public static class VH extends RecyclerView.ViewHolder {
         TextView modelo, marca, descripcion, precio;
+        Button btnBorrar;
 
         public VH(View v) {
             super(v);
@@ -29,6 +33,7 @@ public class RelojesAdapter extends RecyclerView.Adapter<RelojesAdapter.VH> {
             marca       = v.findViewById(R.id.wt_marca);
             descripcion = v.findViewById(R.id.wt_descripcion);
             precio      = v.findViewById(R.id.wt_precio);
+            btnBorrar = v.findViewById(R.id.wt_btnBorrar);
         }
     }
 
@@ -47,11 +52,30 @@ public class RelojesAdapter extends RecyclerView.Adapter<RelojesAdapter.VH> {
         h.descripcion.setText(w.getDescripcion());
         h.precio.setText(w.getPrecio());
 
+        // -----INVESTIGAR POR QUE BORRA ERRONEAMENTE EL BTNBORRAR-----
+
+        h.btnBorrar.setOnClickListener(v -> {
+            if (myDB.deleteById(w.getId())) {
+                list.remove(p);
+                notifyItemRemoved(p);
+            } else {
+                Toast.makeText(v.getContext(), "Error borrando", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 //        h.btnAdd.setOnClickListener(v -> {
 //            Data.addToCart(w);
 //            Toast.makeText(v.getContext(),
 //                    w.name + " agregado", Toast.LENGTH_SHORT).show();
 //        });
+    }
+
+    /**
+     * Reemplaza la lista interna y notifica al RecyclerView.
+     */
+    public void updateData(List<ClaseReloj> nuevos) {
+        this.list = nuevos;
     }
 
     @Override

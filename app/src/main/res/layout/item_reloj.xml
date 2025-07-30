@@ -45,8 +45,8 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/wt_btnAdd"
+        android:id="@+id/wt_btnBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Agregar" />
+        android:text="X" />
 </LinearLayout>

@@ -62,7 +62,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public List<ClaseReloj> getAll() { //Borrar comentarios
+    public List<ClaseReloj> getAll() {
+        //Borrar comentarios
         // 1. Preparamos la lista vacía
         List<ClaseReloj> lista = new ArrayList<>();
 
@@ -91,5 +92,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // 6. Devolvemos la lista completa
         return lista;
     }
+
+    // -----INVESTIGAR POR QUE BORRA ERRONEAMENTE EL BTNBORRAR-----
+    public boolean deleteById(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Borra la fila cuyo ID coincida
+        int rows = db.delete(TABLE_NAME, COL_1 + " = ?", new String[]{ String.valueOf(id) });
+        return rows > 0;
+    }
+
 
 }

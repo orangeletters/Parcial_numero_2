@@ -29,20 +29,22 @@ public class TodosLosRelojesFragment extends Fragment {
         rv = v.findViewById(R.id.rv_watches);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        // -----INVESTIGAR POR QUE BORRA ERRONEAMENTE EL BTNBORRAR-----
+        // AHORA sí rellenas el campo:
         myDB = new DatabaseHelper(requireContext());
         List<ClaseReloj> items = myDB.getAll();
-        adapter = new RelojesAdapter(items);
+        adapter = new RelojesAdapter(items, myDB);
         rv.setAdapter(adapter);
 
         return v;
     }
-
+    // -----INVESTIGAR POR QUE BORRA ERRONEAMENTE EL BTNBORRAR-----
     @Override
     public void onResume() {
-        super.onResume();
-        // 2) Cada vez que volvemos a este fragment, refrescamos los datos
+        super.onResume(); //Borrar comentarios
+        // myDB ya está inicializado
         List<ClaseReloj> nuevos = myDB.getAll();
-        adapter.list = nuevos;                // si tu campo list es público o usa un setter
+        adapter.updateData(nuevos);          // o adapter.list = nuevos
         adapter.notifyDataSetChanged();
     }
 
