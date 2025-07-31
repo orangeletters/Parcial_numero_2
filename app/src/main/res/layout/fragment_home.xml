@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".BrandsFragment">
 
-    <!-- Contenedor con textos centrados -->
+    <!-- Presentación -->
     <LinearLayout
         android:id="@+id/layoutPresentacion"
         android:layout_width="wrap_content"
